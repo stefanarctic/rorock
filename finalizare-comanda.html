@@ -152,11 +152,15 @@
         totalEl.textContent = "0 lei";
         return;
       }
-      wrap.innerHTML = cart.map(i => `
-        <div style="display:flex; justify-content:space-between; gap:12px; border-bottom:1px dashed var(--border); padding-bottom:10px;">
-          <span>${i.emoji} ${i.qty} × ${i.name}${i.size ? " (mărime " + i.size + ")" : ""}</span>
-          <strong style="white-space:nowrap;">${i.price * i.qty} lei</strong>
-        </div>`).join("");
+      wrap.innerHTML = cart.map(i => {
+        const p = PRODUCTS.find((x) => x.id === i.id) || i;
+        return `
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; border-bottom:1px dashed var(--border); padding-bottom:10px;">
+          <div class="cart-item-thumb">${productThumb(p, i.name)}</div>
+          <span style="flex:1;">${i.qty} × ${i.name}${i.size ? " (mărime " + i.size + ")" : ""}</span>
+          <strong style="white-space:nowrap;">${fmt(i.price * i.qty)}</strong>
+        </div>`;
+      }).join("");
       totalEl.textContent = cartTotal() + " lei";
     })();
 
