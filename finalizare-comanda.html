@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RoRock</title>
+  <meta name="description" content="Finalizează comanda ta RoRock: date de livrare și trimiterea comenzii." />
+  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo"><img src="img/logo.png" alt="RoRock" class="logo-img" /></a>
+      <nav class="nav-links">
+        <a href="index.html">Acasă</a>
+        <a href="magazin.html">Magazin</a>
+        <a href="contact-trupe.html">Pentru trupe</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="cart-btn" data-open-cart aria-label="Deschide coșul">
+          🛒
+          <span class="cart-count" data-cart-count>0</span>
+        </button>
+        <button class="burger" aria-label="Meniu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Acasă</a> / Finalizare comandă</div>
+      <h1>Finalizează comanda</h1>
+      <p>Completează datele de livrare. Comanda ta va fi trimisă către RoRock, iar noi te contactăm pentru confirmare și plată.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="shop-layout">
+        <!-- Rezumat coș -->
+        <div class="shop-card reveal">
+          <h3>🛒 Comanda ta</h3>
+          <div id="summaryItems" style="display:grid; gap:12px; margin-bottom:20px;"></div>
+          <div class="cart-total" style="border-top:1px solid var(--border); padding-top:16px;">
+            <span>Total</span><span id="summaryTotal">0 lei</span>
+          </div>
+          <p class="form-note" style="margin-top:10px;">
+            Costul de livrare se calculează la confirmarea telefonică (de obicei 15–25 lei cu Fan Courier, în funcție de greutate).
+          </p>
+        </div>
+
+        <!-- Formular livrare -->
+        <form class="shop-card form-grid reveal reveal-delay-1" id="checkoutForm">
+          <h3 style="margin-bottom:6px;">📦 Date de livrare</h3>
+          <div class="field">
+            <label for="nume">Nume și prenume *</label>
+            <input id="nume" name="nume" type="text" required placeholder="Numele complet" />
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="telefon">Telefon *</label>
+              <input id="telefon" name="telefon" type="tel" required placeholder="07xx xxx xxx (telefonul tău)" />
+            </div>
+            <div class="field">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" required placeholder="nume@exemplu.ro" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="adresa">Adresă completă *</label>
+            <textarea id="adresa" name="adresa" required style="min-height:90px;"
+              placeholder="Stradă, număr, bloc, apartament, oraș, județ, cod poștal"></textarea>
+          </div>
+          <div class="field">
+            <label for="livrare">Metodă de livrare *</label>
+            <select id="livrare" name="livrare" required>
+              <option value="Ramburs (curier)">Ramburs — plătești la livrare</option>
+              <option value="Ridicare din magazin">Ridicare personală din magazin</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" style="justify-content:center;">Trimite comanda</button>
+          <p class="form-note">
+            La apăsarea butonului se deschide un mesaj pre-completat cu comanda ta (WhatsApp sau email).
+            Dacă preferi, poți suna direct la <a href="tel:+40758732326" style="color:var(--accent)">0758 732 326</a>.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="index.html" class="logo"><img src="img/logo.png" alt="RoRock" class="logo-img" /></a>
+          <p>Magazin de metal: patchuri internaționale, tricouri și CD-uri cu trupe din România. Comenzi online și magazin fizic.</p>
+        </div>
+        <div>
+          <h4>Produse</h4>
+          <ul>
+            <li><a href="magazin.html#produse">Magazin</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Informații</h4>
+          <ul>
+            <li><a href="index.html#loctie">Locație & program</a></li>
+            <li><a href="contact-trupe.html">Pentru trupe</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:rorock.sibiu@gmail.com">rorock.sibiu@gmail.com</a></li>
+            <li><a href="tel:+40758732326">0758 732 326</a></li>
+            <li><a href="magazin.html">Adresa magazinului</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© <span class="year"></span> RoRock. Toate drepturile rezervate. 🤘</div>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" data-close-cart></div>
+  <aside class="cart-drawer" aria-label="Coș de cumpărături">
+    <div class="cart-head">
+      <h3>Coșul tău</h3>
+      <button class="cart-close" data-close-cart aria-label="Închide coșul">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot">
+      <div class="cart-total"><span>Total</span><span id="cartTotal">0 lei</span></div>
+      <button class="btn btn-ghost" data-open-cart>Revino la coș</button>
+    </div>
+  </aside>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Rezumatul comenzii pe pagina de finalizare
+    (function renderSummary() {
+      const wrap = document.getElementById("summaryItems");
+      const totalEl = document.getElementById("summaryTotal");
+      if (!wrap) return;
+
+      if (!cart.length) {
+        wrap.innerHTML = `<p style="color:var(--muted)">Coșul e gol. <a href="magazin.html" style="color:var(--accent)">Începe cumpărăturile →</a></p>`;
+        totalEl.textContent = "0 lei";
+        return;
+      }
+      wrap.innerHTML = cart.map(i => `
+        <div style="display:flex; justify-content:space-between; gap:12px; border-bottom:1px dashed var(--border); padding-bottom:10px;">
+          <span>${i.emoji} ${i.qty} × ${i.name}${i.size ? " (mărime " + i.size + ")" : ""}</span>
+          <strong style="white-space:nowrap;">${i.price * i.qty} lei</strong>
+        </div>`).join("");
+      totalEl.textContent = cartTotal() + " lei";
+    })();
+
+    // După trimitere, golim coșul
+    document.getElementById("checkoutForm").addEventListener("submit", () => {
+      cart = [];
+      saveCart(cart);
+    });
+  </script>
+</body>
+</html>

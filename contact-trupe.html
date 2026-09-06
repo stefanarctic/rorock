@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RoRock</title>
+  <meta name="description" content="Ești o trupă din România? Vinde-ți merch-ul (tricouri, CD-uri) prin RoRock. Contactează-ne." />
+  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo"><img src="img/logo.png" alt="RoRock" class="logo-img" /></a>
+      <nav class="nav-links">
+        <a href="index.html">Acasă</a>
+        <a href="magazin.html">Magazin</a>
+        <a href="contact-trupe.html">Pentru trupe</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="cart-btn" data-open-cart aria-label="Deschide coșul">
+          🛒
+          <span class="cart-count" data-cart-count>0</span>
+        </button>
+        <button class="burger" aria-label="Meniu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Acasă</a> / Pentru trupe</div>
+      <h1>Ești trupă? <span style="color:var(--accent)">Hai să vorbim.</span></h1>
+      <p>
+        RoRock vinde tricouri și CD-uri exclusiv cu trupe din România, cu care avem contract.
+        Dacă vrei ca merch-ul tău să ajungă la fani din toată țara — fără bătăi de cap cu stocul,
+        plata și livrarea — scrie-ne mai jos.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="shop-layout">
+        <!-- Formular -->
+        <form class="shop-card form-grid reveal" id="bandForm">
+          <h3 style="margin-bottom:6px;">📨 Trimite-ne un mesaj</h3>
+          <div class="form-row">
+            <div class="field">
+              <label for="bNume">Nume trupă *</label>
+              <input id="bNume" name="nume" type="text" required placeholder="ex: Furia Stâncii" />
+            </div>
+            <div class="field">
+              <label for="bPers">Persoană de contact *</label>
+              <input id="bPers" name="persoana" type="text" required placeholder="Numele tău" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="bEmail">Email *</label>
+              <input id="bEmail" name="email" type="email" required placeholder="trupe@exemplu.ro" />
+            </div>
+            <div class="field">
+              <label for="bTelefon">Telefon</label>
+              <input id="bTelefon" name="telefon" type="tel" placeholder="07xx xxx xxx (al tău)" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="bTip">Ce dorești să vinzi prin RoRock? *</label>
+            <select id="bTip" name="tip" required>
+              <option value="">Alege…</option>
+              <option>Tricouri</option>
+              <option>CD-uri</option>
+              <option>Tricouri + CD-uri</option>
+              <option>Altceva (spune-ne mai jos)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bMesaj">Mesaj *</label>
+            <textarea id="bMesaj" name="mesaj" required
+              placeholder="Spune-ne câteva vorbe despre trupă, genul muzical, dacă ai deja merch produs, linkuri către muzică…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="justify-content:center;">Trimite mesajul</button>
+          <p class="form-note">Îți răspundem de obicei în 2–3 zile lucrătoare.</p>
+        </form>
+
+        <!-- Info colaborare -->
+        <div class="reveal reveal-delay-1" style="display:grid; gap:24px;">
+          <div class="info-card">
+            <div class="icon">🤝</div>
+            <h3>Cum funcționează</h3>
+            <p>Stabilim împreună un contract simplu. Noi ne ocupăm de prezentarea online, comenzile de pe site, încasări și livrare — tu te ocupi de muzică.</p>
+          </div>
+          <div class="info-card">
+            <div class="icon">👕</div>
+            <h3>Ce vindem</h3>
+            <p>Tricouri și CD-uri doar cu trupe din România, cu contract. Patchurile (RO & extern) sunt selecția noastră editorială — poți propune și aici.</p>
+          </div>
+          <div class="info-card">
+            <div class="icon">💸</div>
+            <h3>Transparent</h3>
+            <p>Stabiliți de la început: comision, prețuri, termene de decontare. Fără surprize, doar metal.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="index.html" class="logo"><img src="img/logo.png" alt="RoRock" class="logo-img" /></a>
+          <p>Magazin de metal: patchuri internaționale, tricouri și CD-uri cu trupe din România. Comenzi online și magazin fizic.</p>
+        </div>
+        <div>
+          <h4>Produse</h4>
+          <ul>
+            <li><a href="magazin.html#produse">Magazin</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Informații</h4>
+          <ul>
+            <li><a href="index.html#loctie">Locație & program</a></li>
+            <li><a href="contact-trupe.html">Pentru trupe</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:rorock.sibiu@gmail.com">rorock.sibiu@gmail.com</a></li>
+            <li><a href="tel:+40758732326">0758 732 326</a></li>
+            <li><a href="magazin.html">Adresa magazinului</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© <span class="year"></span> RoRock. Toate drepturile rezervate. 🤘</div>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" data-close-cart></div>
+  <aside class="cart-drawer" aria-label="Coș de cumpărături">
+    <div class="cart-head">
+      <h3>Coșul tău</h3>
+      <button class="cart-close" data-close-cart aria-label="Închide coșul">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot">
+      <div class="cart-total"><span>Total</span><span id="cartTotal">0 lei</span></div>
+      <a href="finalizare-comanda.html" class="btn btn-primary" id="checkoutBtn">Finalizează comanda</a>
+    </div>
+  </aside>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Formularul pentru trupe: deschide clientul de email cu mesajul pregătit
+    document.getElementById("bandForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const d = new FormData(this);
+      const body =
+        `Trupă: ${d.get("nume")}\n` +
+        `Persoană de contact: ${d.get("persoana")}\n` +
+        `Email: ${d.get("email")}\n` +
+        `Telefon: ${d.get("telefon") || "-"}\n\n` +
+        `Dorește să vândă: ${d.get("tip")}\n\n` +
+        `Mesaj:\n${d.get("mesaj")}`;
+      window.location.href =
+        `mailto:rorock.sibiu@gmail.com?subject=${encodeURIComponent("Colaborare trupă: " + d.get("nume"))}&body=${encodeURIComponent(body)}`;
+    });
+  </script>
+</body>
+</html>
